@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracker</title>
+  <link rel="stylesheet" href="/start.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="/logo.jpg" alt="Logo" class="logo">
+      <span class="page-name">Fitness Tracker</span>
+    </div>
+    <div class="nav-right">
+      <a class="home-page" href="home.html">Home</a>
+      <a class="exercises-page" href="exercises.html">Exercises</a>
+      <a class="tracker-page" href="">Tracker</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="title">
+    <h1>Track your Exercises</h1>
+  </div>
+
+  <div class="container">
+    <form id="workouts">
+      <h2>Add your Workout</h2>
+      <input type="date" name="date" id="date" value="2024-01-01" required>
+      <input type="number" name="duration" id="duration" placeholder="Duration (in minutes)" required>
+      <input type="text" id="exercises" placeholder="Exercises (comma seperated)" required>
+      <button type="submit">Add Workout</button>
+    </form>
+  </div>
+  
+  <script>
+    function logout() {
+      fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(response => {
+        window.location.href = "/login";
+      });
+    }
+
+    document.getElementById("workouts").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        date: document.getElementById("date").value,
+        duration: document.getElementById("duration").value,
+        exercises: document.getElementById("exercises").value.split(",")
+      };
+
+      const response = await fetch("/add-workout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        alert("Workout entry added successfully!");
+      } else {
+        alert("Error adding wourkout entry");
+      }
+    });
+  </script>
+</body>
+</html>

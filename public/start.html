@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="start.css">
+  <title>Fitness Tracker</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="logo.jpg" alt="Logo" class="logo">
+      <span class="page-name">Fitness Tracker</span>
+    </div>
+    <div class="nav-right">
+      <button class="login-btn" onclick="goToLoginPage()">Login</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form id="signin-form" method="post">
+      <h2>Register</h2>
+      <label for="username">Username</label>
+      <input type="text" id="signin-username" name="username" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="signin-password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  <script src="start.js"></script>
+  </script>
+</body>
+</html>

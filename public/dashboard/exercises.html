@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises</title>
+  <link rel="stylesheet" href="/start.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="/logo.jpg" alt="Logo" class="logo">
+      <span class="page-name">Fitness Tracker</span>
+    </div>
+    <div class="nav-right">
+      <a class="home-page" href="home.html">Home</a>
+      <a class="exercises-page" href="">Exercises</a>
+      <a class="tracker-page" href="tracker.html">Tracker</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="title">
+    <h1>Explore Exercises</h1>
+  </div>
+  <br>
+  <div class="exercises">
+    <div class="exercise">
+      <h4>Pull Ups</h4>
+      <p>Muscle Group: Biceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Push Ups</h4>
+      <p>Muscle Group: Triceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Sit-Ups</h4>
+      <p>Muscle Group: Abs</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Leg Press</h4>
+      <p>Muscle Group: Legs</p>
+    </div>
+  </div>
+
+  <div class="exercises">
+    <div class="exercise">
+      <h4>Pull Ups</h4>
+      <p>Muscle Group: Biceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Push Ups</h4>
+      <p>Muscle Group: Triceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Sit-Ups</h4>
+      <p>Muscle Group: Abs</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Leg Press</h4>
+      <p>Muscle Group: Legs</p>
+    </div>
+  </div>
+
+  <div class="exercises">
+    <div class="exercise">
+      <h4>Pull Ups</h4>
+      <p>Muscle Group: Biceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Push Ups</h4>
+      <p>Muscle Group: Triceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Sit-Ups</h4>
+      <p>Muscle Group: Abs</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Leg Press</h4>
+      <p>Muscle Group: Legs</p>
+    </div>
+  </div>
+
+  <div class="exercises">
+    <div class="exercise">
+      <h4>Pull Ups</h4>
+      <p>Muscle Group: Biceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Push Ups</h4>
+      <p>Muscle Group: Triceps/Back</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Sit-Ups</h4>
+      <p>Muscle Group: Abs</p>
+    </div>
+  
+    <div class="exercise">
+      <h4>Leg Press</h4>
+      <p>Muscle Group: Legs</p>
+    </div>
+  </div>
+  
+  <script>
+    function logout() {
+      fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(response => {
+        window.location.href = "/login";
+      });
+    }
+  </script>
+</body>
+</html>

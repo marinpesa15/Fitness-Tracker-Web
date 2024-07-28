@@ -1,0 +1,160 @@
+body, nav {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.page-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a {
+  color: white;
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+.nav-right .login-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-right .login-btn:hover {
+  background-color: #0056b3;
+}
+
+.nav-right .logout-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-right .register-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-right .register-btn:hover {
+  background-color: #0056b3;
+}
+
+.nav-right .logout-btn:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 0 auto 15px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  width: 200px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.exercises {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.exercise {
+  flex: 1;
+  max-width: 200px;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+}
